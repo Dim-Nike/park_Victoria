@@ -313,7 +313,7 @@ section
 	background: #FFFFFF;
 	z-index: 100;
 	padding-left: 60px;
-	padding-right: 50px;
+	padding-right: 64px;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -783,20 +783,6 @@ section
 	width: 100%;
 	margin-bottom: 67px;
 }
-
-/* About */
-
-/* .about{
-	padding-top: 88px;
-	width: 100%;
-}
-.about_list{
-	width: 100%;
-    height: 60px;
-    background: #2f2f2f;
-    text-align: center;
-} */
-
 
 /*********************************
 6. Promo

@@ -25,7 +25,7 @@
 	<header class="header">
 		<div class="header_inner d-flex flex-row align-items-center justify-content-start">
 			<div class="logo">
-				<a href="#">Парк Виктория</a>
+				<a href="{% url 'index' %}">Парк Виктория</a>
 				<div class="number"><a href="#">+7(888)777-66-55</a></div>
 			</div>
 			<nav class="main_nav">
@@ -59,7 +59,6 @@
 		<div class="search">
 			<form action="#">
 				<input type="search" class="search_input menu_mm" required="required">
-				<button type="submit" id="search_button_menu" class="search_button menu_mm"><img class="menu_mm" src="{% static 'main/img/magnifying-glass.svg' %}" alt=""></button>
 			</form>
 		</div>
 		<nav class="menu_nav">
@@ -175,7 +174,7 @@
 							<div class="promo_image">
 								<img src="{% static 'main/img/promo_4.jpg' %}" alt="">
 							</div>
-							<div class="promo_link"><a href="#">{{ cat.name }}</a></div>
+							<div class="promo_link"><a href="{% url 'products' cat.pk %}">{{ cat.name }}</a></div>
 						</div>
 					</div>
 				{% endfor %}
@@ -216,9 +215,7 @@
 				</div>
 			</div>
 			<div class="row products_container">
-				{% for product in products %}
-				<!-- Product -->
-					{% if product.popular == True %}
+				{% for product in products_popular %}
 						<div class="col-lg-4 product_col">
 							<div class="product">
 								<div class="product_image">
@@ -233,7 +230,7 @@
 								</div>
 								<div class="product_content clearfix">
 									<div class="product_info">
-										<div class="product_name"><a href="product.html">{{ product.name }}</a></div>
+										<div class="product_name"><a href="product.html">{{ product.name }} - {{ product.categories.name }}</a></div>
 										<div class="product_price">{{ product.price }} P</div>
 									</div>
 									<div class="product_options">
@@ -243,7 +240,6 @@
 								</div>
 							</div>
 						</div>
-					{% endif %}
 				{% endfor %}
 				<!-- Product -->
 <!--				<div class="col-lg-4 product_col">-->
@@ -302,8 +298,7 @@
 	</div>
 
 	<!-- Extra -->
-	{% for product in products %}
-		{% if product.product_is_day == True %}
+	{% for product in products_is_day %}
 			<div class="extra clearfix">
 				<div class="extra_promo extra_promo_1">
 					<div class="extra_promo_image" style="background-image:url({% static 'main/img/extra_3.jpg' %})"></div>
@@ -327,7 +322,6 @@
 					</div>
 				</div>
 			</div>
-		{% endif %}
 	{% endfor %}
 
 	<!-- Gallery -->
@@ -395,7 +389,6 @@
 						<img src="{% static 'main/img/gallery_11.jpg' %}" alt="">
 					</a>
 				</div>
-
 			</div>
 		</div>	
 	</div>
