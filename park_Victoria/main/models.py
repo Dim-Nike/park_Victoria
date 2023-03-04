@@ -30,3 +30,21 @@ class Product(models.Model):
     product_is_day = models.BooleanField(verbose_name='Продукт недели(может быть один)')
 
 
+class MainImg(models.Model):
+    class Meta:
+        verbose_name = 'Фотографии'
+        verbose_name_plural = 'Фотографии'
+
+    img = models.ImageField(verbose_name='Фотография', upload_to='photo/Img/%Y/%m/%d/')
+
+
+class Articles(models.Model):
+    class Meta:
+        verbose_name = 'Статья'
+        verbose_name_plural = 'Статьи'
+
+    title = models.CharField(verbose_name='Заголовок', max_length=100)
+    content = models.TextField(verbose_name='Контент')
+
+    def __str__(self):
+        return self.title

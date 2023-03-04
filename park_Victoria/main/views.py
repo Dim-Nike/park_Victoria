@@ -8,7 +8,9 @@ def show_index(req):
     data = {
         'categories': CategoriesProduct.objects.all(),
         'products_is_day': Product.objects.filter(product_is_day=True),
-        'products_popular': Product.objects.filter(popular=True)
+        'products_popular': Product.objects.filter(popular=True),
+        'images': MainImg.objects.all(),
+        'articles': Articles.objects.all(),
     }
 
     return render(req, 'main/index.html', data)

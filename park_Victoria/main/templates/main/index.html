@@ -8,20 +8,21 @@
 <meta name="description" content="Wish shop project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="{% static 'main/css/bootstrap4/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'main/css/blog.css' %}">
 <link href="{% static 'main/plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="{% static 'main/plugins/OwlCarousel2-2.2.1/owl.carousel.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'main/plugins/OwlCarousel2-2.2.1/owl.theme.default.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'main/plugins/OwlCarousel2-2.2.1/animate.css' %}">
 <link href="{% static 'main/plugins/colorbox/colorbox.css' %}" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="{% static 'main/css/main_styles.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'main/css/contact.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'main/css/contact_responsive.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'main/css/responsive.css' %}">
 </head>
 <body>
 
 <div class="super_container">
-	
 	<!-- Header -->
-
 	<header class="header">
 		<div class="header_inner d-flex flex-row align-items-center justify-content-start">
 			<div class="logo">
@@ -42,10 +43,12 @@
 				<div class="search header_search">
 					<form action="#">
 						<input type="search" class="search_input" required="required">
-						<button type="submit" id="search_button" class="search_button"><img src="{% static 'main/img/magnifying-glass.svg' %}" alt=""></button>
+
 					</form>
 				</div>
 			</div>
+
+			<div class="burger_container d-flex flex-column align-items-center justify-content-around menu_mm"><div></div><div></div><div></div></div>
 		</div>
 	</header>
 
@@ -83,8 +86,10 @@
 					<div class="home_slider_background" style="background-image:url({% static 'main/img/home_slider_2.jpg' %})"></div>
 					<div class="home_slider_content">
 						<div class="home_slider_content_inner">
-							<div class="home_slider_subtitle">Промо Цены</div>
-							<div class="home_slider_title">Новая Коллекция</div>
+							<div class="home_slider_subtitle">Парк Виктория</div>
+							<div class="home_slider_title">
+								Мы вас ждем
+							</div>
 						</div>
 					</div>
 				</div>
@@ -94,8 +99,8 @@
 					<div class="home_slider_background" style="background-image:url({% static 'main/img/home_slider_2.jpg' %})"></div>
 					<div class="home_slider_content">
 						<div class="home_slider_content_inner">
-							<div class="home_slider_subtitle">Промо Цены</div>
-							<div class="home_slider_title">Новая Коллекция</div>
+							<div class="home_slider_subtitle">Почта</div>
+							<div class="home_slider_title">89281560231@yandex.ru</div>
 						</div>
 					</div>
 				</div>
@@ -321,103 +326,79 @@
 				</div>
 			</div>
 	{% endfor %}
+
+<div class="accordions">
+	{% for article in articles %}
+	<details>
+		<summary>
+			{{ article.title }}
+		</summary>
+		<p>{{ article.content }}</p>
+	</details>
+	{% endfor %}
+</div>
+
 	
-	<div class="col-lg-7">
-		<div class="faq">
-			<div class="contact_title"></div>
-			<div class="faq_content">
-				<div class="accordions">
-
-					<div class="accordion_container">
-						<div class="accordion d-flex flex-row align-items-center"><div>Lorem ipsum dolor sit amet, consectetur?</div></div>
-						<div class="accordion_panel">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis quam ipsum. Pellentesque consequat tellus non tortor tempus, id egestas elit iaculis. Proin eu dui porta, pretium metus vitae, pharetra odio. Sed ac mi commodo, pellentesque erat eget, accumsan justo.</p>
-						</div>
-					</div>
-
-					<div class="accordion_container">
-						<div class="accordion d-flex flex-row align-items-center"><div>Ipsum dolor sit amet, consectetur?</div></div>
-						<div class="accordion_panel">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis quam ipsum. Pellentesque consequat tellus non tortor tempus, id egestas elit iaculis. Proin eu dui porta, pretium metus vitae, pharetra odio. Sed ac mi commodo, pellentesque erat eget, accumsan justo.</p>
-						</div>
-					</div>
-
-					<div class="accordion_container">
-						<div class="accordion d-flex flex-row align-items-center active"><div>Proin eu dui porta, pretium metus vitae?</div></div>
-						<div class="accordion_panel">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis quam ipsum. Pellentesque consequat tellus non tortor tempus, id egestas elit iaculis. Proin eu dui porta, pretium metus vitae, pharetra odio. Sed ac mi commodo, pellentesque erat eget, accumsan justo.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 
 	<!-- Gallery -->
 
 	<div class="gallery">
 		<div class="gallery_image" style="background-image:url({% static 'main/img/gallery1.jpg' %})"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="gallery_title text-center">
-						<ul>
-							<li><a href="#">#парквиктория</a></li>
-							<li><a href="#">#парквикториярастения</a></li>
-							<li><a href="#">#парквикториядеревья</a></li>
-						</ul>
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="gallery_title text-center">
+							<ul>
+								<li><a href="#">#парквиктория</a></li>
+								<li><a href="#">#парквикториярастения</a></li>
+								<li><a href="#">#парквикториядеревья</a></li>
+							</ul>
+						</div>
+						<div class="gallery_text text-center">*Прикоснись cdcdcк природе.</div>
+						<div class="button gallery_button"><a href="#">рассмотреть</a></div>
 					</div>
-					<div class="gallery_text text-center">*Прикоснись к природе.</div>
-					<div class="button gallery_button"><a href="#">рассмотреть</a></div>
 				</div>
 			</div>
-		</div>	
 		<div class="gallery_slider_container">
 			
 			<!-- Gallery Slider -->
 			<div class="owl-carousel owl-theme gallery_slider">
-				
 				<!-- Gallery Item -->
-				<div class="owl-item gallery_item">
-					<a class="colorbox" href="{% static 'main/img/gallery_11.jpg' %}">
-						<img src="{% static 'main/img/gallery_11.jpg' %}" alt="">
-					</a>
-				</div>
+				{% for img in images %}
+					<div class="owl-item gallery_item">
+						<a class="colorbox" href="{{ img.img.url }}">
+							<img src="{{ img.img.url }}" alt="">
+						</a>
+					</div>
+				{% endfor %}
 
 				<!-- Gallery Item -->
-				<div class="owl-item gallery_item">
-					<a class="colorbox" href="{% static 'main/img/gallery_11.jpg' %}">
-						<img src="{% static 'main/img/gallery_11.jpg' %}" alt="">
-					</a>
-				</div>
+<!--				<div class="owl-item gallery_item">-->
+<!--					<a class="colorbox" href="{% static 'main/img/pv_2.jpg' %}">-->
+<!--						<img src="{% static 'main/img/pv_2.jpg' %}" alt="">-->
+<!--					</a>-->
+<!--				</div>-->
 
-				<!-- Gallery Item -->
-				<div class="owl-item gallery_item">
-					<a class="colorbox" href="{% static 'main/img/gallery_11.jpg' %}">
-						<img src="{% static 'main/img/gallery_11.jpg' %}" alt="">
-					</a>
-				</div>
+<!--				&lt;!&ndash; Gallery Item &ndash;&gt;-->
+<!--				<div class="owl-item gallery_item">-->
+<!--					<a class="colorbox" href="{% static 'main/img/gallery_11.jpg' %}">-->
+<!--						<img src="{% static 'main/img/gallery_11.jpg' %}" alt="">-->
+<!--					</a>-->
+<!--				</div>-->
 
-				<!-- Gallery Item -->
-				<div class="owl-item gallery_item">
-					<a class="colorbox" href="{% static 'main/img/gallery_11.jpg' %}">
-						<img src="{% static 'main/img/gallery_11.jpg' %}" alt="">
-					</a>
-				</div>
+<!--				&lt;!&ndash; Gallery Item &ndash;&gt;-->
+<!--				<div class="owl-item gallery_item">-->
+<!--					<a class="colorbox" href="{% static 'main/img/gallery_11.jpg' %}">-->
+<!--						<img src="{% static 'main/img/gallery_11.jpg' %}" alt="">-->
+<!--					</a>-->
+<!--				</div>-->
 
-				<!-- Gallery Item -->
-				<div class="owl-item gallery_item">
-					<a class="colorbox" href="{% static 'main/img/gallery_11.jpg' %}">
-						<img src="{% static 'main/img/gallery_11.jpg' %}" alt="">
-					</a>
-				</div>
-
-				<!-- Gallery Item -->
-				<div class="owl-item gallery_item">
-					<a class="colorbox" href="{% static 'main/img/gallery_11.jpg' %}">
-						<img src="{% static 'main/img/gallery_11.jpg' %}" alt="">
-					</a>
-				</div>
+<!--				&lt;!&ndash; Gallery Item &ndash;&gt;-->
+<!--				<div class="owl-item gallery_item">-->
+<!--					<a class="colorbox" href="{% static 'main/img/gallery_11.jpg' %}">-->
+<!--						<img src="{% static 'main/img/gallery_11.jpg' %}" alt="">-->
+<!--					</a>-->
+<!--				</div>-->
 			</div>
 		</div>	
 	</div>
@@ -488,8 +469,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 </div>
 
 <script src="{% static 'main/js/jquery-3.2.1.min.js' %}"></script>
-<script src="{% static 'main/styles/bootstrap4/popper.js' %}"></script>
-<script src="{% static 'main/styles/bootstrap4/bootstrap.min.js' %}"></script>
+<script src="{% static 'main/js/contact_custom.js' %}"></script>
+<script src="{% static 'main/css/bootstrap4/popper.js' %}"></script>
+<script src="{% static 'main/css/bootstrap4/bootstrap.min.js' %}"></script>
 <script src="{% static 'main/plugins/OwlCarousel2-2.2.1/owl.carousel.js' %}"></script>
 <script src="{% static 'main/plugins/easing/easing.js' %}"></script>
 <script src="{% static 'main/plugins/parallax-js-master/parallax.min.js' %}"></script>
