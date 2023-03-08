@@ -54,23 +54,23 @@
 
 	<!-- Menu -->
 
-	<div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">
-		<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
-		<div class="logo menu_mm"><a href="#">Парк Виктория</a></div>
-		<div class="search">
-			<form action="#">
-				<input type="search" class="search_input menu_mm" required="required">
-			</form>
-		</div>
-		<nav class="menu_nav">
-			<ul class="menu_mm">
-				<li class="menu_mm"><a href="#">главная</a></li>
-				<li class="menu_mm"><a href="#">растения</a></li>
-				<li class="menu_mm"><a href="#">деревья</a></li>
-				<li class="menu_mm"><a href="#">контакты</a></li>
-			</ul>
-		</nav>
-	</div>
+<!--	<div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">-->
+<!--		<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>-->
+<!--		<div class="logo menu_mm"><a href="#">Парк Виктория</a></div>-->
+<!--		<div class="search">-->
+<!--			<form action="#">-->
+<!--				<input type="search" class="search_input menu_mm" required="required">-->
+<!--			</form>-->
+<!--		</div>-->
+<!--		<nav class="menu_nav">-->
+<!--			<ul class="menu_mm">-->
+<!--				<li class="menu_mm"><a href="#">главная</a></li>-->
+<!--				<li class="menu_mm"><a href="#">растения</a></li>-->
+<!--				<li class="menu_mm"><a href="#">деревья</a></li>-->
+<!--				<li class="menu_mm"><a href="#">контакты</a></li>-->
+<!--			</ul>-->
+<!--		</nav>-->
+<!--	</div>-->
 
 	<!-- Home -->
 
@@ -175,7 +175,7 @@
 					<div class="col-lg-4 promo_col">
 						<div class="promo_item">
 							<div class="promo_image">
-								<img src="{% static 'main/img/promo_4.jpg' %}" alt="">
+								<img src="{{ cat.photo.url }}" alt="">
 							</div>
 							<div class="promo_link"><a href="{% url 'products' cat.pk %}">{{ cat.name }}</a></div>
 						</div>
@@ -222,7 +222,7 @@
 						<div class="col-lg-4 product_col">
 							<div class="product">
 								<div class="product_image">
-									<img src="{% static 'main/img/product2.jpg' %}" alt="">
+									<img src="{{ product.photo.url }}" alt="">
 								</div>
 								<div class="rating rating_4">
 									<i class="fa fa-star"></i>
