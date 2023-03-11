@@ -25,7 +25,7 @@ def show_products(req, pk):
 
 
 def show_contact(req):
-    # data = {
-    #     'answers': AnswerAsk.objects.filter(is_active=True)
-    # }
-    return render(req, 'main/contact.html')
+    data = {
+        'answers': AnswerAsk.objects.filter(is_active=True)
+    }
+    return render(req, 'main/contact.html', data)
