@@ -22,3 +22,7 @@ def show_products(req, pk):
         'products': Product.objects.filter(popular=True)
     }
     return render(req, 'main/categories.html', data)
+
+
+def show_contact(req):
+    return render(req, 'main/contact.html')
