@@ -60,7 +60,7 @@
 		</div>
 		<nav class="menu_nav">
 			<ul class="menu_mm">
-				<li class="menu_mm"><a href="index.html">home</a></li>
+				<li class="menu_mm"><a href="{% url 'index' %}">home</a></li>
 				<li class="menu_mm"><a href="#">clothes</a></li>
 				<li class="menu_mm"><a href="#">accessories</a></li>
 				<li class="menu_mm"><a href="#">lingerie</a></li>
@@ -78,11 +78,11 @@
 				<div class="col">
 					<div class="home_container">
 						<div class="home_content">
-							<div class="home_title">Contact</div>
+							<div class="home_title">Контакты</div>
 							<div class="breadcrumbs">
 								<ul>
-									<li><a href="index.html">Home</a></li>
-									<li>Contact</li>
+									<li><a href="{% url 'index' %}">На главную</a></li>
+									<li>Контакты</li>
 								</ul>
 							</div>
 						</div>
@@ -113,20 +113,20 @@
 				<div class="col-lg-5">
 
 					<div class="contact_info">
-						<div class="contact_title">contact info</div>
+						<div class="contact_title">Контакты</div>
 						<div class="contact_info_content">
 							<ul>
 								<li>
 									<div class="contact_info_icon"><img src="{% static 'main/img/contact_info_1.png' %}" alt=""></div>
-									<div class="contact_info_text">Rosia Road, no67, Gibraltar UK</div>
+									<div class="contact_info_text">Ростовская область Аксайский район х. Большой лог ул. Фадеева 271</div>
 								</li>
 								<li>
 									<div class="contact_info_icon"><img src="{% static 'main/img/contact_info_2.png' %}" alt=""></div>
-									<div class="contact_info_text">office@yourbusiness.com</div>
+									<div class="contact_info_text"> 89281560231@yandex.ru</div>
 								</li>
 								<li>
 									<div class="contact_info_icon"><img src="{% static 'main/img/contact_info_3.png' %}" alt=""></div>
-									<div class="contact_info_text">+45 7703 29293 34</div>
+									<div class="contact_info_text">+7(928)-156-02-31</div>
 								</li>
 							</ul>
 						</div>
@@ -145,7 +145,7 @@
 				<!-- FAQ -->
 				<div class="col-lg-7">
 					<div class="faq">
-						<div class="contact_title">faq</div>
+						<div class="contact_title">Частые вопросы</div>
 						<div class="faq_content">
 
 							<!-- Accordions -->
@@ -175,7 +175,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col text-center">
-					<div class="footer_logo"><a href="#">Wish</a></div>
+					<div class="footer_logo"><a href="{% url 'index' %}">Парк Виктория</a></div>
 					<nav class="footer_nav">
 <!--						<ul>-->
 <!--							<li><a href="index.html">home</a></li>-->
