@@ -28,10 +28,10 @@
 				<ul>
 					<li><a href="#">главная</a></li>
 					<li><a href="categories.html">прайс</a></li>
-					<li><a href="categories.html">ландшафт</a></li>
-					<li><a href="#">фото</a></li>
-					<li><a href="#">памятка</a></li>
-					<li><a href="contact.html">контакты</a></li>
+<!--					<li><a href="categories.html">ландшафт</a></li>-->
+<!--					<li><a href="#">фото</a></li>-->
+<!--					<li><a href="#">памятка</a></li>-->
+					<li><a href="{% url 'contact' %}">контакты</a></li>
 				</ul>
 			</nav>
 <!--			<div class="header_content ml-auto">-->
@@ -72,7 +72,7 @@
 	<!-- Home -->
 
 	<div class="home">
-		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="{% static 'main/img/contact.jpg' %}" data-speed="0.8"></div>
+		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="{% static 'main/img/contact_img.jpg' %}" data-speed="0.8"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col">
@@ -94,13 +94,13 @@
 
 	<!-- Google Map -->
 
-	<div class="map">
-		<div id="google_map" class="google_map">
-			<div class="map_container">
-				<div id="map"></div>
-			</div>
-		</div>
-	</div>
+<!--	<div class="map">-->
+<!--		<div id="google_map" class="google_map">-->
+<!--			<div class="map_container">-->
+<!--				<div id="map"></div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
 
 
 	<!-- Contact Text -->
@@ -213,7 +213,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Ад�
 <script src="{% static 'main/styles/bootstrap4/bootstrap.min.js' %}"></script>
 <script src="{% static 'main/plugins/easing/easing.js' %}"></script>
 <script src="{% static 'main/plugins/parallax-js-master/parallax.min.js' %}"></script>
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>
+/ src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>
 <script src="{% static 'main/js/contact_custom.js' %}"></script>
 </body>
 </html>
