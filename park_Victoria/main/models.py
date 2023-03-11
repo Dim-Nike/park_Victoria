@@ -48,3 +48,13 @@ class Articles(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class AnswerAsk(models.Model):
+    class Meta:
+        verbose_name = 'Частый вопрос'
+        verbose_name_plural = 'Частые вопросы'
+
+    answer = models.CharField(verbose_name='Вопрос', max_length=155)
+    ask = models.TextField(verbose_name='Ответ')
+    is_active = models.BooleanField(verbose_name='Опубликован')
