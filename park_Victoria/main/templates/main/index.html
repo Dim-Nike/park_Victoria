@@ -31,11 +31,8 @@
 			</div>
 			<nav class="main_nav">
 				<ul>
-					<li><a href="#">главная</a></li>
-					<li><a href="categories.html">прайс</a></li>
-					<li><a href="categories.html">ландшафт</a></li>
-					<li><a href="#">фото</a></li>
-					<li><a href="#">памятка</a></li>
+					<li><a href="{% url 'index' %}">главная</a></li>
+					<li><a href="{% url 'price' %}">прайс</a></li>
 					<li><a href="{% url 'contact' %}">контакты</a></li>
 				</ul>
 			</nav>
