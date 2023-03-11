@@ -7,7 +7,6 @@ from django.urls import path
 
 urlpatterns = [
     path('', show_index, name='index'),
-    path('products/<int:pk>', show_products, name='products'),
-    # path('/contact', show_contact, name='contact')
+    path('products/<int:pk>', show_products, name='products')
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
