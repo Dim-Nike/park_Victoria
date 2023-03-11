@@ -28,5 +28,7 @@ def show_contact(req):
     data = {
 
     }
-
     return render(req, 'main/contacts.html', data)
+
+def show_price(req):
+    return render(req, 'main/1.html')
